@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/dist/css/wangEditor.min.css">
+	<style>
+		body{
+			margin: 0;
+			height: 400px;
+		}
+		.wangEditor-container{
+			height: 100% !important;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo" style="height: 100%;width: 100%;"></div>
+	<script src="/dist/js/lib/jquery-1.10.2.min.js"></script>
+	<script src="/dist/js/wangEditor.min.js"></script>
+	<script src="/x-fullscreen.js"></script>
+	<script>
+		var editor = new wangEditor("demo");
+		editor.config.menus = ['x-fullscreen'];
+		editor.create();
+	</script>
+</body>
+</html>

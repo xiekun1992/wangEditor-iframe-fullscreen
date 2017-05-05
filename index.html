@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			height: 600px;
+			background: #000;
+		}
+		.full-screen{
+			position: fixed;top: 0;bottom: 0;left: 0;right: 0;z-index: 3000;height: 100%;
+		}
+	</style>
+</head>
+<body>
+	wangeditor fullbrowser
+	<iframe id="iframe" src="editor.html" frameborder="0" height="400" width="100%"></iframe>
+	<script>
+		function fullScreen(state){
+			var f = document.querySelector('#iframe');
+			if(state){
+				f.classList.add('full-screen');
+				return window.innerHeight;
+			}else{
+				f.classList.remove('full-screen');
+				return 400;
+			}
+		}
+	</script>
+</body>
+</html>
